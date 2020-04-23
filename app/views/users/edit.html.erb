@@ -1,0 +1,32 @@
+<% if current_user.errors.any? %>
+  <div class="flash">
+    <%= current_user.errors.full_messages %>
+  </div>
+<% end %>
+<div class="main users-edit">
+  <div class="container">
+    <h1 class="form-heading">ユーザー登録編集</h1>
+    <%= form_with model: @user, url: user_path, local: true do |f| %>
+    <%# <%= form_with model: @user, url: user_path, html: { method: :put}, local: true do |f| %>
+      <div class="form users-form">
+        <div class="form-body">
+          <%= f.label "ユーザー名" %>
+          <%= f.text_field :name, placeholder: "名前を入力してください" %>
+          
+          <%= f.label "アイコン", class: 'image_label' %>
+          <%= image_tag @user.image_name.to_s, alt: "preview", class: "prev-image" %>
+          <%= f.file_field :image_name, class: "image_form" %>
+          <%# <%= f.hidden_field :image_cache %>
+
+          <%= f.label "メールアドレス" %>
+          <%= f.text_field :email, placeholder: "emailを入力してください" %>
+          
+          <%= f.label "パスワード" %>
+          <%= f.password_field :password, placeholder: "登録しているパスワードを入力してください" %>
+
+          <%= f.submit "更新"%>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+<div class="main post-new">
+  <div class="container">
+    <h1 class="form-heading">投稿する</h1>
+      <%= form_with model: @post, url: posts_path, local: true do |f| %>
+        <div class="form">
+          <div class="form-body">
+            <% @post.errors.full_messages.each do |message| %>
+              <div class="form-error">
+                <%= message %>
+              </div>
+            <% end %>
+            
+            <%= f.label :content %>
+            <%= f.text_area :content %>
+
+            <%= f.label :image %>
+            <%= f.file_field :image %>
+
+            <%= f.submit "投稿" %>
+          </div>
+        </div>
+      <% end %>
+  </div>
+</div>
