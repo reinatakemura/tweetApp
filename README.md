@@ -1,24 +1,36 @@
-# README
+# TweetApp
+http://13.230.227.235/
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## 概要
+「つぶやき」を共有できるアプリケーションです。
+簡易版Twitterです。
 
-Things you may want to cover:
+## 制作背景/工夫した点
+- 毎日使うTwitterを自分でも作れたら、技術力が付くだろうと思い作成しました。
+- 本来のTwitterだと投稿の編集ができませんが、誤字などを直したい時もあるので、作成したアプリでは編集できるようにしました。
 
-* Ruby version
+## 機能
+- 新規登録・ログイン/ログアウト
+   - デフォルトのユーザーアイコンを設定
+- テストユーザー
+   - e-mail：test@example.com
+   - password：123456
+- ユーザー情報 編集
+- ユーザー画像選択時の画像プレビュー
+- 「つぶやき」投稿・編集・削除
+- いいね機能
+- ユーザー一覧
+   - 詳細：各ユーザーの投稿一覧・いいねした投稿一覧
 
-* System dependencies
+## 今後実装したい機能
+- google認証（実装がうまくいっていないため）
+- コメント機能
+- フォロー機能
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## 使用技術
+- Ruby
+- Ruby on Rails
+- jQuery
+- MySQL
+- AWS/EC2・S3
+- Capistrano
